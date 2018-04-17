@@ -24,15 +24,38 @@ class Main extends Component {
   render() {
     return (
       <div className="Main">
-        <header className="App-header">
-          <h1 className="App-title">Ping</h1>
-        </header>
-        <div className="App-intro">
-          <div>
-            <button onClick={this.ping}>Ping!</button>
-            <div>Ponged: {this.state.ponged}</div>
+
+        <div className="header" style={{ display: 'flex', flexDirection: 'column', height: '160px' }}>
+          <header style={{ display: 'flex', flexDirection: 'column', backgroundColor: '#222', color: 'white', height: '40%' }}>
+            <h1 className="App-title">Ping</h1>
+          </header>
+          <div style={{ display: 'flex', flexDirection: 'row', margin: 'auto', height: '60%', padding: '10px' }}>
+            <button className="pingpong" onClick={this.ping}>Ping!</button>
+            <div className="pingpong" style={{ paddingLeft: '25px' }}>Ponged: {this.state.ponged}</div>
           </div>
         </div>
+
+        <div className="blocks" style={{ display: 'flex', flexDirection: 'column', height: '600px' }}>
+          <div className="section-two" style={{ display: 'flex', flexDirection: 'row', flex: 1 }}>
+            <div style={{ backgroundColor: 'red', width: '33%' }}>
+              <p style={{ textAlign: 'left', padding: '10px', fontSize: '5vw' }}>Red</p>
+            </div>
+            <div style={{ backgroundColor: 'blue', width: '67%' }}>
+              <p style={{ textAlign: 'left', padding: '10px', fontSize: '5vw' }}>Blue</p>
+            </div>
+          </div>
+        </div>
+
+        <footer className="footer">
+          <ul>
+            <li>About</li>
+            <li>Contact</li>
+            <li>FAQ</li>
+            <li>Blog</li>
+            <li>Pricing</li>
+          </ul>
+        </footer>
+
       </div>
     );
   }
